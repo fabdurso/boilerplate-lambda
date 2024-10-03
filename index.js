@@ -2,7 +2,7 @@ const AWS = require('aws-sdk');
 const dynamoDb = new AWS.DynamoDB.DocumentClient();
 
 exports.handler = async (event) => {
-	const allowedOrigin = process.env.ALLOWED_ORIGIN || 'https://ruralis.com';
+  const allowedOrigin = process.env.ALLOWED_ORIGIN || 'https://ruralis.com';
   const tableName = process.env.HOUSES_TABLE_NAME || 'Houses';
 
   const headers = {
